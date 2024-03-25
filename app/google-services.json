@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "155009440289",
+    "project_id": "benimyemek-2e9a2",
+    "storage_bucket": "benimyemek-2e9a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155009440289:android:eb917652733f99ffec6160",
+        "android_client_info": {
+          "package_name": "com.example.benimyemek"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDy1SSZsZhJ2yQl41K1HNMYQGPHollGmhw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

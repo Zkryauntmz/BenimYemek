@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.example.benimyemek.ui.fragment.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/urunDetay"
+            app:destination="@id/urunDetayFragment" />
+        <action
+            android:id="@+id/sepetGecis"
+            app:destination="@id/sepetFragment" />
+        <action
+            android:id="@+id/uyeGiris"
+            app:destination="@id/logInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sepetFragment"
+        android:name="com.example.benimyemek.ui.fragment.SepetFragment"
+        android:label="fragment_sepet"
+        tools:layout="@layout/fragment_sepet" >
+        <argument
+            android:name="sepeteGelen"
+            app:argType="com.example.benimyemek.data.entity.Urunler" />
+        <argument
+            android:name="sepetegelen"
+            app:argType="com.example.benimyemek.data.entity.Sepet" />
+    </fragment>
+    <fragment
+        android:id="@+id/urunDetayFragment"
+        android:name="com.example.benimyemek.ui.fragment.UrunDetayFragment"
+        android:label="fragment_yemek_detay"
+        tools:layout="@layout/fragment_yemek_detay" >
+        <argument
+            android:name="urun"
+            app:argType="com.example.benimyemek.data.entity.Urunler" />
+        <action
+            android:id="@+id/sepetgit"
+            app:destination="@id/sepetFragment" />
+        <action
+            android:id="@+id/backAnasayfa"
+            app:destination="@id/anasayfaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.benimyemek.ui.fragment.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/anasayfaDonus"
+            app:destination="@id/anasayfaFragment" />
+        <action
+            android:id="@+id/kaydolGecis"
+            app:destination="@id/kaydolFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kaydolFragment"
+        android:name="com.example.benimyemek.ui.fragment.KaydolFragment"
+        android:label="KaydolFragment" >
+        <action
+            android:id="@+id/uyeolGecis"
+            app:destination="@id/logInFragment" />
+    </fragment>
+</navigation>
